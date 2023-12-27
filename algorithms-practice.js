@@ -131,3 +131,18 @@ const newSentence2 = words2
 generatePtag(
   `The sentence with each word capitalize the short way is now &#8594; ${newSentence2}`
 );
+
+//********************************************************************************* //
+//*                                      NUMBER 5                                 * //
+//*                                 Calculate Percentages                         * //
+//********************************************************************************* //
+
+//* Calculate percentage
+
+let value = 57;
+let total = 171;
+
+generatePtag(
+  `The percentage of value devided by total is &#8594; 
+    ${((value / total) * 100).toFixed(2)}%`
+);
