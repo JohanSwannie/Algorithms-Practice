@@ -146,3 +146,25 @@ generatePtag(
   `The percentage of value devided by total is &#8594; 
     ${((value / total) * 100).toFixed(2)}%`
 );
+
+//********************************************************************************* //
+//*                                      NUMBER 6                                 * //
+//*                            Get a random element in an array                   * //
+//********************************************************************************* //
+
+let array2 = [
+  16,
+  "Yes",
+  "blue",
+  false,
+  39.4,
+  "yellow",
+  true,
+  "Thomas",
+  27,
+  "Lucy",
+];
+
+const rndElement = array2[Math.floor(Math.random() * array2.length)];
+
+generatePtag(`The randome element in the array is &#8594; ${rndElement}`);
