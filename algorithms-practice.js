@@ -90,6 +90,11 @@ generatePtag(
 //*                                 Capitalize a single word                      * //
 //********************************************************************************* //
 
+let word = "interesting";
+word = `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+
+generatePtag(`The word capitalize is now &#8594; ${word}`);
+
 //********************************************************************************* //
 //*                                      NUMBER 4                                 * //
 //*                        Capitalize each word in a sentence                     * //
