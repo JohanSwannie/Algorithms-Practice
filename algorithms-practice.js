@@ -5,11 +5,12 @@ const generatePtag = (innerContent) => {
   pippie.innerHTML = innerContent;
   container.appendChild(pippie);
 };
+//********************************************************************************** //
+//*                                   NUMBER 1                                     * //
+//*   Sum all the numbers in a range with 2 numbers given in or out of sequence    * //                                    * //
+//********************************************************************************** //
 
-//********************************************************************************* //
-//* Sum all the numbers in a range with 2 numbers given in or out of sequence
 //* Long way
-//********************************************************************************* //
 
 const sumLongWay = (arr1) => {
   arr1.sort((a, b) => a - b);
@@ -26,10 +27,7 @@ generatePtag(
   `Sum the numbers between 8 and 17 the long way &#8594; ${sumLongWay([17, 8])}`
 );
 
-//********************************************************************************* //
-//* Sum all the numbers in a range with 2 numbers given in or out of sequence
 //* Short way
-//********************************************************************************* //
 
 const sumShortWay = (arr2) => {
   let total2 = 0;
@@ -43,4 +41,46 @@ generatePtag(
   `Sum the numbers between 3 and 21 the short way &#8594; ${sumShortWay([
     3, 21,
   ])}`
+);
+
+//********************************************************************************* //
+//*                                      NUMBER 2                                 * //
+//*                  Return the symmetric differences between 2 arrays            * //
+//********************************************************************************* //
+
+//* Long way
+
+const symDiff = (array1, array2) => {
+  const COMBINEDVALUES = new Set([...array1, ...array2]);
+  const DIFFARRAY = [];
+  for (element of COMBINEDVALUES) {
+    array1.includes(element) && !array2.includes(element)
+      ? DIFFARRAY.push(element)
+      : array2.includes(element) && !array1.includes(element)
+      ? DIFFARRAY.push(element)
+      : null;
+  }
+  return DIFFARRAY;
+};
+
+const firstArray = [11, 2, 15, 20, 7, 33, 9, 8, 29];
+const secondArray = [7, 10, 8, 13, 20, 29, 2, 16];
+
+generatePtag(
+  `Return the symmetric differences between 2 arrays - Long way &#8594; 
+    ${symDiff(firstArray, secondArray)}`
+);
+
+//* Short way
+
+const arr1 = [7, 28, 44, 10, 5, 8, 33, 19, 3];
+const arr2 = [28, 3, 5, 18, 12, 19, 7, 11, 10, 15, 8];
+
+const diff1 = arr1.filter((item) => !arr2.includes(item));
+const diff2 = arr2.filter((item) => !arr1.includes(item));
+const result = [...diff1, ...diff2];
+result.sort((a, b) => a - b);
+
+generatePtag(
+  `Return the symmetric differences between 2 arrays - Short way &#8594; ${result}`
 );
