@@ -84,9 +84,3 @@ result.sort((a, b) => a - b);
 generatePtag(
   `Return the symmetric differences between 2 arrays - Short way &#8594; ${result}`
 );
-
-let word1 = "onderstebo";
-
-word1 = `${word1.charAt(0).toUpperCase()}${word1.slice(1)}`;
-
-alert(word1);
