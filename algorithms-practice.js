@@ -90,7 +90,6 @@ generatePtag(
 //*                                 Capitalize a single word                      * //
 //********************************************************************************* //
 
-let 
 //********************************************************************************* //
 //*                                      NUMBER 4                                 * //
 //*                        Capitalize each word in a sentence                     * //
@@ -107,6 +106,5 @@ for (let i = 0; i < words.length; i++) {
 const newSentence1 = words.join(" ");
 
 generatePtag(
-    `The sentence with each word capitalize is now &#8594; ${newSentence1}`
-  );
-  
+  `The sentence with each word capitalize is now &#8594; ${newSentence1}`
+);
