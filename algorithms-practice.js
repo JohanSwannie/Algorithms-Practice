@@ -100,6 +100,8 @@ generatePtag(`The word capitalize is now &#8594; ${word}`);
 //*                        Capitalize each word in a sentence                     * //
 //********************************************************************************* //
 
+//* Long way
+
 const sentence = "we know that eating healthy works out well";
 
 const words = sentence.split(" ");
@@ -111,5 +113,21 @@ for (let i = 0; i < words.length; i++) {
 const newSentence1 = words.join(" ");
 
 generatePtag(
-  `The sentence with each word capitalize is now &#8594; ${newSentence1}`
+  `The sentence with each word capitalize the long way is now &#8594; ${newSentence1}`
+);
+
+//* Short way
+
+const sentence2 = "barnie the brown bear eats honey";
+
+const words2 = sentence2.split(" ");
+
+const newSentence2 = words2
+  .map((word) => {
+    return word[0].toUpperCase() + word.substring(1);
+  })
+  .join(" ");
+
+generatePtag(
+  `The sentence with each word capitalize the short way is now &#8594; ${newSentence2}`
 );
