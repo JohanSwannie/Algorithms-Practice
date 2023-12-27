@@ -84,3 +84,17 @@ result.sort((a, b) => a - b);
 generatePtag(
   `Return the symmetric differences between 2 arrays - Short way &#8594; ${result}`
 );
+
+//* Capitalize each word in a sentence - Longer Method
+
+const sentence = "the black bear eat potatoes";
+
+const words = sentence.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+  words[i] = `${words[i][0].toUpperCase()}${words[i].slice(1)}`;
+}
+
+const newSentence1 = words.join(" ");
+
+alert(newSentence1);
