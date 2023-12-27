@@ -85,9 +85,18 @@ generatePtag(
   `Return the symmetric differences between 2 arrays - Short way &#8594; ${result}`
 );
 
-//* Capitalize each word in a sentence - Longer Method
+//********************************************************************************* //
+//*                                      NUMBER 3                                 * //
+//*                                 Capitalize a single word                      * //
+//********************************************************************************* //
 
-const sentence = "the black bear eat potatoes";
+let 
+//********************************************************************************* //
+//*                                      NUMBER 4                                 * //
+//*                        Capitalize each word in a sentence                     * //
+//********************************************************************************* //
+
+const sentence = "we know that eating healthy works out well";
 
 const words = sentence.split(" ");
 
@@ -97,4 +106,7 @@ for (let i = 0; i < words.length; i++) {
 
 const newSentence1 = words.join(" ");
 
-alert(newSentence1);
+generatePtag(
+    `The sentence with each word capitalize is now &#8594; ${newSentence1}`
+  );
+  
